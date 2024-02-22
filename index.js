@@ -110,8 +110,13 @@ function copupon(){
         grandPrice.innerText = grand_price;
         const discountPrice = document.getElementById('discount-price');
         discountPrice.innerText = (total_price*15/100);
+        let divButtonDisable = document.getElementById('div-button-disable');
+        divButtonDisable.classList.add('hidden');
+        let cuponValidityCheck = document.getElementById('cupon-validity-check');
+        cuponValidityCheck.classList.remove('hidden');
+        cuponValidityCheck.classList.add('flex');
+        cuponValidityCheck.innerText = '(Valid Cupon Code)';
         
-
     }
     else if (copupunCheek =='Couple 20') {
         grand_price = total_price - (total_price*20/100);
@@ -119,12 +124,23 @@ function copupon(){
         grandPrice.innerText = grand_price;
         const discountPrice = document.getElementById('discount-price');
         discountPrice.innerText = (total_price*15/100);
+        let divButtonDisable = document.getElementById('div-button-disable');
+        divButtonDisable.classList.add('hidden');
+        let cuponValidityCheck = document.getElementById('cupon-validity-check');
+        cuponValidityCheck.classList.remove('hidden');
+        cuponValidityCheck.classList.add('flex');
+        cuponValidityCheck.innerText = '(Valid Cupon Code)';
     }
     else{
         const grandPrice = document.getElementById('grand-price')
         grandPrice.innerText = total_price;
         const discountPrice = document.getElementById('discount-price');
         discountPrice.innerText = 0 ;
+        let divButtonDisable = document.getElementById('div-button-disable');
+        divButtonDisable.classList.add('hidden');
+        let cuponValidityCheck = document.getElementById('cupon-validity-check');
+        cuponValidityCheck.classList.remove('hidden');
+        cuponValidityCheck.classList.add('flex');
     }
 }
 

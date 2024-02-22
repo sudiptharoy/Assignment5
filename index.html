@@ -509,11 +509,14 @@
                                         <div>Total Price</div>
                                         <div>BDT <span id="total-price">0</span></div>
                                     </div>
+                                    <div class="px-9 justify-between text-[#030712] inter-font text-base font-medium py-3 hidden" id="cupon-validity-check">
+                                        (invalid coupon code)
+                                    </div>
                                     <div class="px-9 justify-between text-[#030712] inter-font text-base font-medium py-3 hidden" id="discount-div">
                                         <div>Discounted Price</div>
                                         <div>BDT <span id="discount-price">0</span></div>
                                     </div>
-                                    <div class="w-[369px] h-[65px] mx-auto">
+                                    <div class="w-[369px] h-[65px] mx-auto" id="div-button-disable">
                                         <label class="input flex items-center gap-2 h-[65px]" id="label-id">
                                             <input type="text" class="grow" disabled id="input-disable" placeholder="Have any copupon?" />
                                             <button class="btn w-[80px] h-[50px] mr-[3px] bg-[#1DD100] text-white" id="button-disable"  onclick="copupon()"  disabled>Apply</button>
