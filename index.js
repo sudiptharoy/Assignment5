@@ -1,6 +1,6 @@
 let seat_array = [];
 let copupon_code = ['NEW15','Couple 20'];
-
+let signal = false ;
 const per_ticket_price = 550 ;
 let total_price = 0 ;
 let number_of_seat_remain = 40;
@@ -18,7 +18,7 @@ function seat_selected(id_value){
             seatCount.innerText = number_of_seat_remain ;
             const seatBooked = document.getElementById('seat-booked');
             seatBooked.innerText = number_of_seat_booked;
-            total_price += 550;
+            total_price += 550; 
             const grandPrice = document.getElementById('grand-price')
             grandPrice.innerText = total_price;
             for (let i = 0 ; i < seat_array.length ; i+=1){
@@ -121,14 +121,30 @@ function copupon(){
     }
 }
 
-document.getElementById('phone-number').addEventListener('keyup',function(){
+document.getElementById('phone-number').addEventListener('keyup',function (){
     const phoneNumber = document.getElementById('phone-number');
     const phone_number_check = phoneNumber.value;
     if (seat_array.length > 0 && phone_number_check.length === 11) {
-        console.log('true');
         const nextDisable = document.getElementById('next-disable');
-        nextDisable.removeAttribute('disabled')
+        nextDisable.removeAttribute('disabled');
     }
 })
 
+function nextButton(){
 
+    signal = !signal;
+    console.log(signal);
+    if (signal == true) {
+        let phoneNumber = document.getElementById('phone-number');
+        let phone_number_check = phoneNumber.value;
+      
+        phoneNumber.value = '';
+        let passangerId = document.getElementById('passenger-id');
+        let passanger_id_check = passangerId.value;
+        passanger_id_check.value = '';
+        let emailId = document.getElementById('email-id');
+        let email_id_check = emailId.value;
+        email_id_check.value = '';
+ 
+    }
+}
