@@ -29,6 +29,7 @@ function seat_selected(id_value){
                 selected_seat_color_change.classList.add('text-[#FFFFFF]');
 
                 const array_elements = document.getElementById(seat_array[i]);
+
             }    
         }
     }
@@ -78,6 +79,9 @@ function seat_selected(id_value){
         buttonDisable.removeAttribute('disabled');
         const inputDisable = document.getElementById('input-disable') ;
         inputDisable.removeAttribute('disabled');
+        const alartId = document.getElementById('alart-id');
+        alartId.classList.remove('hidden');
+        alartId.classList.add('flex');
         
     }
         
@@ -97,6 +101,9 @@ function copupon(){
     discountDiv.classList.add('flex');
     const hrLine = document.getElementById('hr-line');
     hrLine.classList.remove('hidden');
+    const alartId = document.getElementById('alart-id');
+    alartId.classList.remove('flex');
+    alartId.classList.add('hidden');
     if (copupunCheek =='NEW15') {
         grand_price = total_price - (total_price*15/100);
         const grandPrice = document.getElementById('grand-price')
